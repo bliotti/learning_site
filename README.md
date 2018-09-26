@@ -1,6 +1,4 @@
-
-
-# Getting Started with Django
+pi# Getting Started with Django
 
 
 
@@ -8,6 +6,10 @@
 
 `python3 -m venv venv`
 `source venv/bin/activate`
+
+## install depends
+
+` pip install -r requirements.txt
 
 ## change Directoy
 
