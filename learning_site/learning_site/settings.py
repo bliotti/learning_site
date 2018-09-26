@@ -30,7 +30,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = (
+INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -38,25 +38,25 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'courses',
-)
+]
 
-MIDDLEWARE_CLASSES = (
+MIDDLEWARE = [
+    'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.middleware.security.SecurityMiddleware',
-)
+]
+
 
 ROOT_URLCONF = 'learning_site.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates',],
+        'DIRS': ['templates', ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -82,13 +82,30 @@ DATABASES = {
     }
 }
 
+# Password validation
+# https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
+
+AUTH_PASSWORD_VALIDATORS = [
+    {
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+    },
+]
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'America/Los_Angeles'
+TIME_ZONE = 'America/New_York'
 
 USE_I18N = True
 
