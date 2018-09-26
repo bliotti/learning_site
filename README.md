@@ -1,5 +1,4 @@
-pi# Getting Started with Django
-
+# Getting Started with Django
 
 
 ## Set up the Virtual Enviorment
@@ -18,4 +17,3 @@ pi# Getting Started with Django
 ## Start Server
 
 `python manage.py runserver`
-
